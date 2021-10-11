@@ -16,7 +16,7 @@ public class main45 {
     }
 
     public static void promptUser() throws IOException {
-
+        //scans in user input in order to file in output file name
         Scanner userInput = new Scanner(System.in);
 
         System.out.print("\nEnter the name of Output File : ");
