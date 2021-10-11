@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main42 {
     public static void main(String[] args) throws FileNotFoundException {
 
-        System.out.printf("%-17s%-17s%-17s\n", "Last", "First", "Salary");
+        System.out.printf("%-15s%-15s%-17s\n", "Last", "First", "Salary");
         System.out.println("----------------------------------------");
         formTable();
 
@@ -27,7 +27,7 @@ public class Main42 {
         String line;
         while ((line = input.nextLine()) != null) {
             String[] personInfo = line.split(",");
-            System.out.printf("%-17s%-17s%-17s\n", personInfo[0], personInfo[1], personInfo[2]);
+            System.out.printf("%-15s%-15s%-15s\n", personInfo[0], personInfo[1], personInfo[2]);
 
         }
 

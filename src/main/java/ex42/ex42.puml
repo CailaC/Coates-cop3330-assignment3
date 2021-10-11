@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class Main42 {
++ main()
++formTable()
+
+}
+
+@enduml

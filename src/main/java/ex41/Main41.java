@@ -1,57 +1,64 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 Caila Coates
+ */
 package ex41;
 
+import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Scanner;
-import java.io.*;
+import java.util.Arrays;
 
 public class Main41 {
-   /* public static void main(String[] args) throws FileNotFoundException {
 
-        File file = new File(
-                "C:\\Users\\caila\\OneDrive\\Desktop\\University of Central Florida\\Fall21\\exercise41_input.txt");
-        Scanner input = new Scanner(file);
+    //Calls readList
+    public static void main(String[] args) throws FileNotFoundException {
+        readList();
 
-        System.out.println(input.nextLine());
+    }
 
+    //create a function that reads in the file names and puts them into an array
+    public static void readList() throws FileNotFoundException {
 
+        //initializes variable that determines how many names are in the list
+        int nameCount = 0 ;
 
-    } */
+        //creates unsorted array
+        ArrayList<String> unsortedList = new ArrayList<>();
 
-   public static void main(String[] args) {
+        //reads in file and adds the text in to a list of names
         try {
-            BufferedReader fileInput = new BufferedReader(
-                    new FileReader("src/main/java/ex41/exercise41_input.txt"));
+            BufferedReader fileInput = new BufferedReader(new FileReader("src/main/java/ex41/exercise41_input.txt"));
             String s;
             while ((s = fileInput.readLine()) != null) {
-                System.out.println(s);
+                unsortedList.add(s);
+                nameCount++;
             }
             fileInput.close();
         } catch (Exception ex) {
             return;
         }
+
+        //takes unsorted list and sorts it
+        sortListAlphabetically(unsortedList.toArray(new String[nameCount]), nameCount);
+    }
+
+    //Takes in unsorted list and sorts the list alphabetically then prints it
+    public static void sortListAlphabetically(String sortedList[], int arraySize){
+        //sorts list alphabetically
+        Arrays.sort(sortedList);
+
+        //Prints output
+        System.out.println("Total of " + arraySize + " names");
+        System.out.println("------------------");
+
+        for(int i = 0; i < arraySize; i++){
+            System.out.println(sortedList[i]);
+        }
+
     }
 
 
 }
-
-
-
-
-
-
-    //create a function that takes in a list of names
-//createList will read file and create the list from there
-    //public static void readList() throws IOException {
-
-
-  //  }
-
-
-
-//create a class that takes in the list of names and sorts them alphabetically
-    //main will call function sort
-
 

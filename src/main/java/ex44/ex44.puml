@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class Main44 {
++main()
+---
++findProduct()
+----
++question();
+
+}
+
+
+@enduml

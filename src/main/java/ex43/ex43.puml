@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+ Main43 <|-- BuildWebsite
+
+ Main43 : main()
+ BuildWebsite : BuildWebsite()
+ BuildWebsite : createFolder()
+
+
+@enduml
