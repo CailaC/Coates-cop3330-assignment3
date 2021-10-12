@@ -6,8 +6,8 @@
  Main43 <|-- BuildWebsite
 
  Main43 : main()
- BuildWebsite : BuildWebsite()
- BuildWebsite : createFolder()
+ BuildWebsite : BuildWebsite((String site, String author, char js, char css)
+ BuildWebsite : createFolder(String path, char js, char css)
 
 
 @enduml
